@@ -3,7 +3,7 @@ function [coordinates] = extract_coordinates(artificial_processes, max_number_of
 
 [~, num_of_mice] = size(all_ts);
 
-coordinates = NaN(num_of_mice, 26);
+coordinates = NaN(num_of_mice, 31);
 
 for this_mouse = 1:num_of_mice
     all_birth_t = artificial_processes(this_mouse, 1:max_number_of_pairs, 1, 1);
@@ -70,6 +70,10 @@ for this_mouse = 1:num_of_mice
     max_S = max(all_S);
     max_CS = max(all_CS);
     max_RS = max(all_RS);
+    min_S = min(all_S);
+    min_CS = min(all_CS);
+    min_RS = min(all_RS);
+
 
     val_range = largest_max - smallest_min;
 
@@ -130,6 +134,10 @@ for this_mouse = 1:num_of_mice
     coordinates(this_mouse, 27) = var_S;
     coordinates(this_mouse, 28) = var_CS;
     coordinates(this_mouse, 29) = var_RS;
+    coordinates(this_mouse, 30) = min_S;
+    coordinates(this_mouse, 31) = min_CS;
+    coordinates(this_mouse, 32) = min_RS;
+    
 
 
 end

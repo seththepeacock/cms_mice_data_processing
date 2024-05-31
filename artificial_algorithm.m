@@ -3,25 +3,6 @@ clear
 
 
 
-
-% %DO 2019 ALGORITHM
-% 
-% all_ts = readmatrix("2019_Data_Only_CMS_vs_Control");
-% %set parameters
-% max_number_of_pairs = 30;
-% persistence_threshold_percent = 0.05;
-% spike_comparison_percent = 0.9;
-% comparison_method = 'B';
-% average_threshold_percent = 0.15;
-% 
-% artificial_processes_2019 = extract_processes(all_ts, persistence_threshold_percent, spike_comparison_percent, comparison_method, max_number_of_pairs);
-% artificial_coordinates3D_2019 = extract_coordinates(artificial_processes_2019, max_number_of_pairs, all_ts, average_threshold_percent);
-% %(mouse num, pair num, birth or death, time or value)
-% 
-% save artificial_processes_2019.mat artificial_processes_2019 artificial_coordinates3D_2019
-
-
-
 %DO ALGORITHM (ORIGINAL)
 
 all_ts = readmatrix("Only_CMS_vs_Control.xlsx");
@@ -52,6 +33,24 @@ save artificial_processes.mat ...
     artificial_processes_90 artificial_coordinates3D_90 ...
     artificial_processes_75 artificial_coordinates3D_75 ...
     artificial_processes_50 artificial_coordinates3D_50
+
+
+
+% %DO 2019 ALGORITHM
+% 
+% all_ts = readmatrix("2019_Data_Only_CMS_vs_Control");
+% %set parameters
+% max_number_of_pairs = 30;
+% persistence_threshold_percent = 0.05;
+% spike_comparison_percent = 0.9;
+% comparison_method = 'B';
+% average_threshold_percent = 0.15;
+% 
+% artificial_processes_2019 = extract_processes(all_ts, persistence_threshold_percent, spike_comparison_percent, comparison_method, max_number_of_pairs);
+% artificial_coordinates3D_2019 = extract_coordinates(artificial_processes_2019, max_number_of_pairs, all_ts, average_threshold_percent);
+% %(mouse num, pair num, birth or death, time or value)
+% 
+% save artificial_processes_2019.mat artificial_processes_2019 artificial_coordinates3D_2019
 
 
 
