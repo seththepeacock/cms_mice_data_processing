@@ -44,6 +44,7 @@ for this_mouse = 1:num_of_mice
 
         signed_val_persistence = (val_death - val_birth);
         all_S_signed(i) = signed_val_persistence / time_persistence;
+        
 
         if val_birth < val_death
             %the ith process is a release!
@@ -96,7 +97,6 @@ for this_mouse = 1:num_of_mice
     avg_S = mean(all_S, "omitnan");
     avg_CS = mean(all_CS, "omitnan");
     avg_RS = mean(all_RS, "omitnan");
-    avg_S_signed = mean(all_S_signed, "omitnan");
 
     var_S = var(all_S, "omitnan");
     var_CS = var(all_CS, "omitnan");
@@ -148,7 +148,7 @@ for this_mouse = 1:num_of_mice
     coordinates(this_mouse, 32) = min_RS;
     coordinates(this_mouse, 33) = avg_x_to_60_slope;
     coordinates(this_mouse, 34) = abs_avg_x_to_60_slope;
-    coordinates(this_mouse, 35) = avg_S_signed;
+    coordinates(this_mouse, 35) = signed_avg_slope;
     
 
 end
