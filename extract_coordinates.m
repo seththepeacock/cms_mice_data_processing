@@ -104,6 +104,9 @@ for this_mouse = 1:num_of_mice
     avg_CS_to_avg_RS_distance = abs(avg_CS - avg_RS);
     max_CS_to_max_RS_Distance = abs(max_CS - max_RS);
 
+    x_to_60_slopes = readmatrix("x_to_60_slopes.xlsx");
+    v = x_to_60_slopes(1:30, this_mouse);
+    avg_x_to_60_slope = mean(v);
 
     coordinates(this_mouse, 1) = smallest_min;
     coordinates(this_mouse, 2) = largest_max;
@@ -137,8 +140,8 @@ for this_mouse = 1:num_of_mice
     coordinates(this_mouse, 30) = min_S;
     coordinates(this_mouse, 31) = min_CS;
     coordinates(this_mouse, 32) = min_RS;
+    coordinates(this_mouse, 33) = avg_x_to_60_slope;
     
-
 
 end
 end
