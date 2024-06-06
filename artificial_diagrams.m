@@ -16,26 +16,26 @@ A3D_50 = artificial_coordinates3D_50;
 
 fig_num = 1;
 
-% x = 34;
-% y = 29;
-% z = 15;
-% black_num = 14;
-% file_name = string(x) + "." + string(y) + "." + string(z) + " #" + black_num + " is Black - A75";
-% title = "A75 - Pure Separation Except Control #" + black_num + " (Black): ";
-% make_3D_plot(A3D_90, x, y, z, black_num, file_name, title, 'both', 1)
+x = 34;
+y = 29;
+z = 23;
+black_num = 14;
+file_name = string(x) + "." + string(y) + "." + string(z) + " #" + black_num + " is Black - A75";
+title = "A75 - Pure Separation Except Control #" + black_num + " (Black): ";
+make_3D_plot(A3D_90, x, y, z, black_num, file_name, title, 'both', 1)
 
-for i = 35
-    for j = 19:32
-        for k = 19:32
-            if i == j || i == k || j == k
-                continue
-            end
-            make_3D_plot(A3D_75, i, j, k, 0, string(i) + "." + string(j) + "." + string(k) + " - A75", 'Point Cloud of Artificially Extracted Features (75%, 5%, B): ', 'both', fig_num)
-            close all
-            fig_num = fig_num + 1;
-        end
-    end
-end
+% for i = 35
+%     for j = 19:34
+%         for k = 19:34
+%             if i == j || i == k || j == k
+%                 continue
+%             end
+%             make_3D_plot(A3D_75, i, j, k, 0, string(i) + "." + string(j) + "." + string(k) + " - A75", 'Point Cloud of Artificially Extracted Features (75%, 5%, B): ', 'both', fig_num)
+%             close all
+%             fig_num = fig_num + 1;
+%         end
+%     end
+% end
 
 % x = 15;
 % y = 7;
