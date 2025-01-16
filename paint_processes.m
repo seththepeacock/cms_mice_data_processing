@@ -17,18 +17,15 @@ num_of_processes = size(processes, 2);
         hold on
     
         for i = 1:num_of_processes
+       
             t_start = processes(this_mouse, i, 1, 1);
             t_end = processes(this_mouse, i, 2, 1);
     
             if isnan(t_start) || isnan(t_end)
                 continue
             end
-    
-            ts = timeseries(time_series(t_start:t_end), t_start:t_end);
-    
-    
-            plot(ts, 'Color', colors(i, :), 'LineWidth', linewidth);
-    
+            
+            plot(t_start:t_end, time_series(t_start:t_end), 'Color', colors(i, :), 'LineWidth', linewidth);
             
         end
     

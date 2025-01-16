@@ -2,9 +2,9 @@ close all
 clear
 
 
-
-%DO ALGORITHM (ORIGINAL)
-
+% 
+% %DO ALGORITHM (ORIGINAL)
+% 
 all_ts = readmatrix("Only_CMS_vs_Control.xlsx");
 %set parameters
 max_number_of_pairs = 90;
@@ -56,20 +56,30 @@ save artificial_processes.mat ...
 
 %PAINTING PROCESSES
 
-colors = construct_colors(max_number_of_pairs);
-%pick sorting/plotting parameters
-mouse_range = [1, 18];
-linewidth = 2;
-heading = "Painted Processes (75%, 5%, B)";
-filename = "Painted Processes (75, 5, B)";
-savefigs = true;
+% colors = construct_colors(max_number_of_pairs);
+% %pick sorting/plotting parameters
+% mouse_range = [1, 18];
+% linewidth = 2;
+% heading = "Painted Processes (75%, 5%, B)";
+% filename = "Painted Processes (75, 5, B)";
+% savefigs = true;
 
 
 % paint_processes(mouse_range, artificial_processes, all_ts, linewidth, colors, 1, heading, filename, savefigs);
  
 
 
-
+% colors = construct_colors(20);
+% %pick sorting/plotting parameters
+% mouse_range = [16, 16];
+% linewidth = 1;
+% heading = "Time Series of Serotonin Concentration";
+% filename = "Painted Time Series";
+% savefigs = false;
+% 
+% 
+% paint_processes(mouse_range, artificial_processes_75, all_ts, linewidth, colors, 1, heading, filename, savefigs);
+% 
 
 
 

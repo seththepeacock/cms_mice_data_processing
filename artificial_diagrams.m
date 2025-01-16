@@ -12,17 +12,22 @@ A3D_50 = artificial_coordinates3D_50;
 
 
 
+%  MAKING PLOTS
+
+% fig_num = 1;
+% 
+% x = 34;
+% y = 29;
+% z = 23;
+% black_num = 14;
+% file_name = string(x) + "." + string(y) + "." + string(z) + " #" + black_num + " is Black - A75";
+% title = "A75 - Pure Separation Except Control #" + black_num + " (Black): ";
+% make_3D_plot(A3D_90, x, y, z, black_num, file_name, title, 'both', 1)
+% 
 
 
-fig_num = 1;
 
-x = 34;
-y = 29;
-z = 23;
-black_num = 14;
-file_name = string(x) + "." + string(y) + "." + string(z) + " #" + black_num + " is Black - A75";
-title = "A75 - Pure Separation Except Control #" + black_num + " (Black): ";
-make_3D_plot(A3D_90, x, y, z, black_num, file_name, title, 'both', 1)
+
 
 % for i = 35
 %     for j = 19:34
